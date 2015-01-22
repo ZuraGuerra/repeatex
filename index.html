@@ -1,11 +1,50 @@
-<html ng-app>
+<html ng-app="repeatex">
   <head>
     <script src="vendor/jquery/dist/jquery.min.js"></script>
     <script src="vendor/angularjs/angular.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <h1>Repeatex</h1>
+    <div class="white-block">
+      <div class="page-wrap">
+        <nav>
+          <a href="https://github.com/rcdilorenzo/repeatex">GitHub</a>
+        </nav>
+        <br>
+        <br>
+        <img src="img/logo.svg">
+        <h1>Repeatex</h1>
+        <i>Natural language parsing for repeating dates</i>
+      </div>
+    </div>
+    <div class="content">
+      <div class="page-wrap">
+        <h2>Examples</h2>
+        <div class="quote"><p><span>on wednesday every week</span></p></div>
+        <div class="quote"><p><span>every other monday</span></p></div>
+        <div class="quote"><p><span>mon-sat every week</span></p></div>
+        <div class="quote"><p><span>every 3rd of the month</span></p></div>
+        <div class="quote"><p><span>1st and 3rd every 2 months</span></p></div>
+        <div class="quote"><p><span>on the 3rd tuesday of every month</span></p></div>
+        <br>
+      </div>
+    </div>
+    <div class="white-block" ng-controller="MainController">
+      <div class="page-wrap">
+        <h2>Try it!</h2>
+        <input class="large" type="text" ng-model="description" placeholder="on wednesday every week" ng-change="updateOutput()" autofocus />
+        <br>
+        <i>Is the text above not parsing correctly? Please <a ng-href="https://github.com/rcdilorenzo/repeatex/issues/new?title={{issueTitle}}&body={{issueBody}}">click here</a> to report this as an issue.</i>
+        <br>
+        <pre>{{ output | json }}</pre>
+      </div>
+    </div>
+    <footer>
+      <div class="page-wrap">
+        MIT License. Produced and written by Christian Di Lorenzo.
+      </div>
+    </footer>
   </body>
 
   <script src="app.js"></script>
