@@ -8,4 +8,12 @@ app.controller('MainController', function($scope, $http) {
     $scope.issueTitle = 'Parse Issue: "' + $scope.description + '"';
     $scope.issueBody = "The description \"" + $scope.description + "\" was supposed to be parsed properly, but wasn't. Thanks for your assistance with working on this issue.";
   };
+
+  $scope.goToDemo = function () {
+    element = $('input.large');
+    $('html, body').animate({
+        scrollTop: element.offset().top
+    }, 800);
+    element.focus();
+  };
 });
