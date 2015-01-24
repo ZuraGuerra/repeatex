@@ -35,16 +35,27 @@ h1 {
   text-align: center;
 }
 
+#nprogress .bar {
+  background: RGB(140, 107, 172);
+}
+
+#nprogress .spinner-icon {
+  border-top-color: RGB(140, 107, 172);
+  border-left-color: RGB(140, 107, 172);
+}
+
 nav a {
   text-align: auto;
   float: right;
   padding: 5px 10px;
   border: 2px solid RGB(109, 82, 136);
+  color: RGB(109, 82, 136);
   text-decoration: none;
   font-size: 12pt;
   border-radius: 5px;
   transition: all 0.2s;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 nav a:hover {

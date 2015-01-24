@@ -2,7 +2,9 @@
   <head>
     <script src="vendor/jquery/dist/jquery.min.js"></script>
     <script src="vendor/angularjs/angular.min.js"></script>
+    <script src="vendor/nprogress/nprogress.js"></script>
     <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="vendor/nprogress/nprogress.css">
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body ng-controller="MainController">
@@ -34,7 +36,7 @@
     <div class="white-block" >
       <div class="page-wrap" id="demo">
         <h2>Try it!</h2>
-        <input class="large" type="text" ng-model="description" placeholder="on wednesday every week" ng-change="updateOutput()"/>
+        <input class="large" type="text" ng-model="description" placeholder="on wednesday every week" ng-model-options="{debounce: 800}" ng-change="updateOutput()"/>
         <br>
         <i>Is the text above not parsing correctly? Please <a ng-href="https://github.com/rcdilorenzo/repeatex/issues/new?title={{issueTitle}}&body={{issueBody}}">click here</a> to report this as an issue.</i>
         <br>
