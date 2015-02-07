@@ -25,7 +25,7 @@ app.config(function($httpProvider) {
 
 app.controller('MainController', function($scope, $http) {
   $scope.updateOutput = function() {
-    $http.get('http://repeatex.herokuapp.com/?description=' + $scope.description).then(function (response) {
+    $http.get('http://104.236.63.52:4000/?description=' + $scope.description).then(function (response) {
       $scope.output = response.data;
     });
     $scope.issueTitle = 'Parse Issue: "' + $scope.description + '"';
